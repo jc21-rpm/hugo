@@ -20,7 +20,7 @@ wget https://github.com/gohugoio/hugo/archive/v%{github_version}.tar.gz
 tar xzf v%{github_version}.tar.gz
 mkdir -p %{_builddir}/src/github.com/gohugoio/
 cd %{_builddir}/src/github.com/gohugoio/
-mv %{name}-%{github_version} %{name}
+mv %{_builddir}/%{name}-%{github_version} %{name}
 cd %{name}
 
 %build
