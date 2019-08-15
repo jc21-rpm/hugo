@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
-%global github_version  0.57.0
-%global rpm_version     0.57.0
+%global github_version  0.57.1
+%global rpm_version     0.57.1
 
 Name:           hugo
 Version:        %{rpm_version}
@@ -39,6 +39,9 @@ cp %{_builddir}/bin/hugo %{buildroot}%{_bindir}
 %{_bindir}/hugo
 
 %changelog
+* Fri Aug 16 2019 Jamie Curnow <jc@jc21.com> 0.57.1-1
+- New release 0.57.1
+
 * Thu Aug 15 2019 Jamie Curnow <jc@jc21.com> 0.57.0-1
 - New release 0.57.0
 
