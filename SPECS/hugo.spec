@@ -42,6 +42,9 @@ cp %{_builddir}/bin/hugo %{buildroot}%{_bindir}
 * Thu Jan 2 2020 Jamie Curnow <jc@jc21.com> 0.62.1-1
 - New release 0.62.1
 
+* Thu Dec 26 2019 Jamie Curnow <jc@jc21.com> 0.62.0-1
+- New release 0.62.0
+
 * Thu Dec 12 2019 Jamie Curnow <jc@jc21.com> 0.61.0-1
 - New release 0.61.0
 
