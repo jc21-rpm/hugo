@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
-%global github_version  0.63.2
-%global rpm_version     0.63.2
+%global github_version  0.64.0
+%global rpm_version     0.64.0
 
 Name:           hugo
 Version:        %{rpm_version}
@@ -39,6 +39,9 @@ cp %{_builddir}/bin/hugo %{buildroot}%{_bindir}
 %{_bindir}/hugo
 
 %changelog
+* Wed Feb 5 2020 Jamie Curnow <jc@jc21.com> 0.64.0-1
+- New release 0.64.0
+
 * Tue Jan 28 2020 Jamie Curnow <jc@jc21.com> 0.63.2-1
 - New release 0.63.2
 
