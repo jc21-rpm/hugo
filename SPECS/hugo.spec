@@ -17,26 +17,17 @@ BuildRequires:  git golang
 Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, easy use and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website.
 
 %prep
-%setup -n %{name}-%{github_version}
-mkdir -p %{_builddir}/src/github.com/gohugoio/
-cd %{_builddir}/src/github.com/gohugoio/
-mv %{_builddir}/%{name}-%{github_version} %{name}
-cd %{name}
+%setup -qn %{name}-%{github_version}
 
 %build
-export GOPATH="%{_builddir}"
-export PATH=$PATH:"%{_builddir}"/bin
-cd %{_builddir}/src/github.com/gohugoio/hugo
-GO111MODULE=on go install
+go build -o %{_builddir}/bin/%{name} main.go
 
 %install
-mkdir -p %{buildroot}%{_bindir}
-
-cp %{_builddir}/bin/hugo %{buildroot}%{_bindir}
-
+install -Dm0755 %{_builddir}/bin/%{name} %{buildroot}%{_bindir}/%{name}
 
 %files
-%{_bindir}/hugo
+%{_bindir}/%{name}
+%doc LICENSE *.md docs/*.md
 
 %changelog
 * Wed Mar 25 2020 Jamie Curnow <jc@jc21.com> 0.68.3-1
