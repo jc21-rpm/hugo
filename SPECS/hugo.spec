@@ -1,23 +1,20 @@
 %define debug_package %{nil}
 
-%global github_version  0.68.3
-%global rpm_version     0.68.3
-
 Name:           hugo
-Version:        %{rpm_version}
+Version:        0.69.0
 Release:        1%{?dist}
 Summary:        A Fast and Flexible Static Site Generator
 Group:          Applications/System
 License:        Apache 2.0
 URL:            https://github.com/gohugoio/hugo
-Source:         https://github.com/gohugoio/hugo/archive/v%{github_version}.tar.gz
+Source:         https://github.com/gohugoio/hugo/archive/v%{version}.tar.gz
 BuildRequires:  git golang
 
 %description
 Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, easy use and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website.
 
 %prep
-%setup -qn %{name}-%{github_version}
+%setup -qn %{name}-%{version}
 
 %build
 go build -o %{_builddir}/bin/%{name} main.go
@@ -30,6 +27,9 @@ install -Dm0755 %{_builddir}/bin/%{name} %{buildroot}%{_bindir}/%{name}
 %doc LICENSE *.md docs/*.md
 
 %changelog
+* Tue Apr 14 2020 Jamie Curnow <jc@jc21.com> 0.69.0-1
+- New release 0.69.0
+
 * Wed Mar 25 2020 Jamie Curnow <jc@jc21.com> 0.68.3-1
 - New release 0.68.3
 
