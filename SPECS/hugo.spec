@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:           hugo
-Version:        0.76.3
+Version:        0.76.4
 Release:        1%{?dist}
 Summary:        A Fast and Flexible Static Site Generator
 Group:          Applications/System
@@ -27,6 +27,9 @@ install -Dm0755 %{_builddir}/bin/%{name} %{buildroot}%{_bindir}/%{name}
 %doc LICENSE *.md docs/*.md
 
 %changelog
+* Tue Oct 13 2020 Jamie Curnow <jc@jc21.com> 0.76.4-1
+- New release 0.76.4
+
 * Fri Oct 9 2020 Jamie Curnow <jc@jc21.com> 0.76.3-1
 - New release 0.76.3
 
