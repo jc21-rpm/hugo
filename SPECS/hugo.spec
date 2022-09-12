@@ -2,7 +2,7 @@
 
 Name:           hugo
 Version:        0.96.0
-Release:        1%{?dist}
+Release:        1
 Summary:        A Fast and Flexible Static Site Generator
 Group:          Applications/System
 License:        Apache 2.0
