@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:           hugo
-Version:        0.96.0
+Version:        0.103.0
 Release:        1
 Summary:        A Fast and Flexible Static Site Generator
 Group:          Applications/System
