@@ -1,8 +1,8 @@
 %define debug_package %{nil}
 
 Name:           hugo
-Version:        0.113.0
-Release:        1
+Version:        0.127.0
+Release:        1%{?dist}
 Summary:        A Fast and Flexible Static Site Generator
 Group:          Applications/System
 License:        Apache 2.0
@@ -27,6 +27,9 @@ install -Dm0755 %{_builddir}/bin/%{name} %{buildroot}%{_bindir}/%{name}
 %doc LICENSE *.md docs/*.md
 
 %changelog
+* Tue Jun 25 2024 Jamie Curnow <jc@jc21.com> 0.127.0-1
+- New release 0.127.0
+
 * Tue Jun 6 2023 Jamie Curnow <jc@jc21.com> 0.113.0-1
 - New release 0.113.0
 
