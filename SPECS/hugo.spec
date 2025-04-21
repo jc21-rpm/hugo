@@ -11,13 +11,15 @@ Source:         https://github.com/gohugoio/hugo/archive/v%{version}.tar.gz
 BuildRequires:  git golang
 
 %description
-Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, easy use and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website.
+Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed,
+easy use and configurability. Hugo takes a directory with content and templates and renders
+them into a full HTML website.
 
 %prep
 %setup -qn %{name}-%{version}
 
 %build
-go build -o %{_builddir}/bin/%{name} main.go
+go build -tags extended,withdeploy -o %{_builddir}/bin/%{name} main.go
 
 %install
 install -Dm0755 %{_builddir}/bin/%{name} %{buildroot}%{_bindir}/%{name}
