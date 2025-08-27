@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:           hugo
-Version:        0.146.6
+Version:        0.149.0
 Release:        1%{?dist}
 Summary:        A Fast and Flexible Static Site Generator
 Group:          Applications/System
@@ -29,6 +29,9 @@ install -Dm0755 %{_builddir}/bin/%{name} %{buildroot}%{_bindir}/%{name}
 %doc LICENSE *.md docs/*.md
 
 %changelog
+* Thu Aug 28 2025 Jamie Curnow <jc@jc21.com> 0.149.0-1
+- https://github.com/gohugoio/hugo/releases/tag/v0.149.0
+
 * Mon Apr 21 2025 Jamie Curnow <jc@jc21.com> 0.146.6-1
 - https://github.com/gohugoio/hugo/releases/tag/v0.146.6
 
